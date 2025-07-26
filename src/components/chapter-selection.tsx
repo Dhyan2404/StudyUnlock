@@ -1,17 +1,31 @@
 
 "use client";
 
-import React, { useState, useRef, type ElementType } from 'react';
+import React, { useState, useRef, type ElementType, lazy } from 'react';
 import type { Subject } from '@/hooks/use-unlock-store';
 import { allSubjectChapters, type Chapter, type Section } from '@/lib/chapters';
 import { Button } from './ui/button';
-import { ArrowLeft, FlaskConical, Dna, Atom, Sigma, Landmark } from 'lucide-react';
-import PDFViewer from './pdf-viewer';
+import { ArrowLeft, FlaskConical, Dna, Atom, Sigma, Landmark, Loader2 } from 'lucide-react';
 import { Card, CardHeader, CardTitle } from './ui/card';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import StarfieldBackground from './starfield-background';
 import { playSound } from '@/lib/audio';
+import dynamic from 'next/dynamic';
+
+const PDFViewer = dynamic(() => import('./pdf-viewer'), { 
+    ssr: false,
+    loading: () => (
+        <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-20">
+            <div className="text-center text-muted-foreground">
+                <Loader2 className="h-12 w-12 mx-auto animate-spin mb-4 text-primary" />
+                <h2 className="text-xl font-headline text-foreground">Preparing Viewer...</h2>
+                <p>Please wait a moment.</p>
+            </div>
+        </div>
+    )
+});
+
 
 const SectionCard = ({ section, onSelect, icon: IconComponent }: { section: Section, onSelect: (chapter: Chapter) => void, icon: ElementType }) => {
     const cardRef = useRef<HTMLDivElement>(null);

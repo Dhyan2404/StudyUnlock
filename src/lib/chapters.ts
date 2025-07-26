@@ -27,7 +27,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'chem-main',
         name: 'Chemistry',
-        pdfUrl: '/science/chemistry.pdf'
+        pdfUrl: '/chemistry.pdf'
       }],
     },
     {
@@ -36,7 +36,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'bio-main',
         name: 'Biology',
-        pdfUrl: '/science/biology.pdf'
+        pdfUrl: '/biology.pdf'
       }],
     },
     {
@@ -45,7 +45,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'phy-main',
         name: 'Physics',
-        pdfUrl: '/science/physics.pdf'
+        pdfUrl: '/physics.pdf'
       }],
     },
   ],
@@ -61,7 +61,7 @@ const mathChapters: SubjectChapters = {
       chapters: Array.from({ length: 14 }, (_, i) => ({
         id: `ch-${i + 1}`,
         name: `Chapter ${i + 1}`,
-        pdfUrl: `/math/ch${i + 1}.pdf`,
+        pdfUrl: `/MATH_CH${i + 1}.pdf`,
       })),
     },
   ],
@@ -77,7 +77,7 @@ const socialStudiesChapters: SubjectChapters = {
       chapters: Array.from({ length: 22 }, (_, i) => ({
         id: `ch-${i + 1}`,
         name: `Chapter ${i + 1}`,
-        pdfUrl: `/ss/ch${i + 1}.pdf`,
+        pdfUrl: `/SS_CH${i + 1}.pdf`,
       })),
     },
   ],
