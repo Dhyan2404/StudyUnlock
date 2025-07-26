@@ -17,6 +17,7 @@ export type SubjectChapters = {
   sections: Section[];
 };
 
+// Replace these placeholder IDs with your actual Google Drive File IDs
 const scienceChapters: SubjectChapters = {
   id: 'science',
   name: 'Science',
@@ -27,7 +28,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'chem-main',
         name: 'Chemistry',
-        pdfUrl: '/chemistry.pdf'
+        pdfUrl: 'https://drive.google.com/file/d/1V1s8ntf27q7VyymxaQSYNR0EkOX6WCwP/preview'
       }],
     },
     {
@@ -36,7 +37,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'bio-main',
         name: 'Biology',
-        pdfUrl: '/biology.pdf'
+        pdfUrl: 'https://drive.google.com/file/d/1TsQvff4Fr75OivpahlQ7hHOnvi1sLCtn/preview'
       }],
     },
     {
@@ -45,7 +46,7 @@ const scienceChapters: SubjectChapters = {
       chapters: [{
         id: 'phy-main',
         name: 'Physics',
-        pdfUrl: '/physics.pdf'
+        pdfUrl: 'https://drive.google.com/file/d/1m311G9NhlVVCCnoUvPIhj-TnbfMIIrFD/preview'
       }],
     },
   ],
@@ -61,7 +62,8 @@ const mathChapters: SubjectChapters = {
       chapters: Array.from({ length: 14 }, (_, i) => ({
         id: `ch-${i + 1}`,
         name: `Chapter ${i + 1}`,
-        pdfUrl: `/MATH_CH${i + 1}.pdf`,
+        // Note: You will need to replace the ID for each chapter
+        pdfUrl: `https://drive.google.com/file/d/REPLACE_WITH_MATH_CH${i+1}_FILE_ID/preview`,
       })),
     },
   ],
@@ -77,7 +79,8 @@ const socialStudiesChapters: SubjectChapters = {
       chapters: Array.from({ length: 22 }, (_, i) => ({
         id: `ch-${i + 1}`,
         name: `Chapter ${i + 1}`,
-        pdfUrl: `/SS_CH${i + 1}.pdf`,
+         // Note: You will need to replace the ID for each chapter
+        pdfUrl: `https://drive.google.com/file/d/REPLACE_WITH_SS_CH${i+1}_FILE_ID/preview`,
       })),
     },
   ],
